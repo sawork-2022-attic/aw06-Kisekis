@@ -1,23 +1,16 @@
-# aw06
+用spring batch partitioner处理applicances和videogames的数据，数据存在mysql中
 
+(amazon下的数据太大传不到github上
 
-[Amazon Review Data (2018)](https://nijianmo.github.io/amazon/index.html) has a huge products metadata set of multiple categories.
+![image-20220503220102590](https://gitee.com/cosie/markdown-pic/raw/master/image-20220503220102590.png)
 
-|category| reviews | metadata |
-|--| -- | -- |
-|Amazon Fashion|reviews (883,636 reviews)|metadata (186,637 products)|
-|All Beauty|reviews (371,345 reviews)|metadata (32,992 products)|
-|Appliances|reviews (602,777 reviews)|metadata (30,459 products)|
-| ... |
-|Tools and Home Improvement|reviews (9,015,203 reviews)|metadata (571,982 products)|
-Toys and Games|reviews (8,201,231 reviews)|metadata (634,414 products)|
-Video Games|reviews (2,565,349 reviews)|metadata (84,893 products)|
+![image-20220503220114068](https://gitee.com/cosie/markdown-pic/raw/master/image-20220503220114068.png)
 
-Please finish the following tasks:
+共102247条数据
 
-- Download no less than two categories of these metadata.
-- Referring the example code in this repo, convert each line in the downloaded files into a POJO of `Product` class and save the object in a database like MySQL. 
-- Integrate the database containing Amazon products with your own AW04 project and build an Amazon WebPOS system.
+![image-20220503220917557](https://gitee.com/cosie/markdown-pic/raw/master/image-20220503220917557.png)
 
+![image-20220503220926508](https://gitee.com/cosie/markdown-pic/raw/master/image-20220503220926508.png)
 
-And, of course, always try to make the system run as fast as possible.
+然后设置为aw4的数据库（价格是随机数，图片不显示是因为有的商品本来就没图片
+

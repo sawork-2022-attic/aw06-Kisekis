@@ -24,7 +24,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import org.springframework.core.task.SimpleAsyncTaskExecutor;
-
+//
 //@Configuration
 //@EnableBatchProcessing
 public class PartitionConfig {
@@ -51,7 +51,7 @@ public class PartitionConfig {
     public Partitioner partitioner() throws Exception {
         MultiResourcePartitioner partitioner = new MultiResourcePartitioner();
         PathMatchingResourcePatternResolver resolver = new PathMatchingResourcePatternResolver();
-        partitioner.setResources(resolver.getResources("file:/home/java/meta_Clothing_Shoes_and_Jewelry/x*"));
+        partitioner.setResources(resolver.getResources("file:/src/main/resources/data/meta*"));
         return partitioner;
     }
 
@@ -73,7 +73,7 @@ public class PartitionConfig {
     }
 
     @Bean
-    public ItemWriter<Product> itemWriter() {
+    public ItemWriter<Product>  itemWriter() {
         return new ProductWriter();
     }
 
